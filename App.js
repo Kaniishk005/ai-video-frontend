@@ -9,7 +9,7 @@ function App() {
   const handleSearch = async () => {
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/search", { topic });
+      const res = await axios.post("https://ai-video-backend-be7j.onrender.com", { topic });
       setResults(res.data);
     } catch (error) {
       alert("Error searching videos. Make sure the backend is running.");
